@@ -4,6 +4,7 @@ import dotenv from 'dotenv'
 
 import AuthRouter from './routers/auth_router.js';
 import errorMiddleware from './middlewares/error_middleware.js';
+import SpotRouter from './routers/spot_router.js';
 
 // Конфигурация переменных среды.
 dotenv.config();
@@ -20,6 +21,7 @@ app.use(express.json());
 
 // Routers.
 app.use('/rest-api/auth', AuthRouter);
+app.use('/rest-api/spots', SpotRouter);
 
 // Middleware. ДОЛЖНЫ БЫТЬ ПОСЛЕ ВСЕХ app.use.
 app.use(errorMiddleware);

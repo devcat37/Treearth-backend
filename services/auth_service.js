@@ -5,7 +5,7 @@ import ApiError from '../exceptions/api_error.js';
 
 class AuthService {
     async registration(userId) {
-        const candidate = await UserModel.findOne({userId});
+        const candidate = await UserModel.findOne({uid: userId});
         if (candidate) {
             throw ApiError.BadRequestError('Пользователем с ID: ' + userId + ' уже существует!');
         }
