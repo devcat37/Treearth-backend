@@ -86,6 +86,7 @@ class SpotService {
         // Создание точки в базе данных.
         const spot = await PlantSpotModel.create({
             title: "Пихта",
+            type: "PLANT",
             position: {
                 latitude: 56.02421412,
                 longtitude: 18.0424324

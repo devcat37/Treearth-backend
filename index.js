@@ -10,7 +10,7 @@ import SpotRouter from './routers/spot_router.js';
 dotenv.config();
 
 // Достаем порт, на котором запустить сервер.
-const port = process.env.PORT || 443;
+const port = process.env.PORT || 8081;
 
 // Ссылка на подключение к базе данных.
 const databaseUrl = process.env.DB_URL;
